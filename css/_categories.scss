@@ -1,0 +1,84 @@
+
+.categories{
+    
+    margin-top: 65px;
+  
+  @include flex();
+
+  flex-wrap: wrap;
+
+
+  @include respond-to(mini)
+{
+ 
+    flex-direction: column;
+   
+}
+
+  .category-items
+{
+    min-height: 261px;
+    min-width: 31.6%;
+    text-align: center;
+    background-size: cover;
+   
+@include flex(center, center);
+@include respond-to(tablet)
+{
+    min-height: 168px;
+}
+@include respond-to(mini)
+{
+   height: 248px;
+   min-width: 100%;
+   margin-top: 32px;
+}
+
+
+
+}
+.title1-category{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+    color: #FFFFFF;
+
+}
+.title2-category{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28.8px;
+    color:  $color-main;
+    
+
+}
+.category-women
+{
+    background-image: url(../img/1-forwoman.jpg);
+}
+.category-men
+{
+    background-image: url(../img/1-forman.png);
+}
+.category-child
+{
+    background-image: url(../img/3-forkid.png);
+}
+.category-acc
+{
+    background-image: url(../img/accesories.png);
+    background-repeat: no-repeat;
+    margin-top: 30px;
+    min-height: 180px;
+    min-width: 100%;
+
+    @include respond-to(mini)
+    {
+       height: 111px;
+       min-width: 100%;
+    }
+
+
+
+}
+}

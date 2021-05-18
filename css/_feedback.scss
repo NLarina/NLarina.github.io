@@ -1,0 +1,129 @@
+.feedback
+    {
+       background-image: url(../img/feedback-bg.png);
+     
+       background-color: #F4F4F4;
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-size:cover;
+    
+  
+    }
+.feedback-items-box
+{
+    min-height: 450px;
+    text-align: center;
+    @include flex();
+
+
+    @include respond-to(tablet)
+    {
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: center;
+        min-height:614px;
+        
+    }
+   
+}
+
+
+    .feedback-items-right
+    {
+        min-height: 225px;
+        min-width: 32%;
+     @include flex();
+        flex-direction: column;
+
+
+        
+      
+    }
+    .feedback-items-left
+    {
+        min-height: 142px;
+        min-width: 557px;
+        @include flex();
+        flex-direction: column;
+        @include respond-to(mini)
+        {
+            min-width: 341px;
+
+        }
+
+
+
+    }
+    p.feedback-item-right-quote
+    {
+        font-weight: 400;
+        font-size: 20px;
+        padding-bottom: 30px;
+
+
+        @include respond-to(mini)
+        {
+           
+font-size: 18px;
+line-height: 22px;
+        }
+    }
+    p.feedback-item-right-quote span
+    {
+        font-style: italic;
+    }
+    p.feedback-item-title
+    {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        @include respond-to(mini)
+        {
+         
+font-size: 14px;
+
+        }
+    }
+    p.feedback-item-title span
+    {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 40px;
+    }
+   #input-email
+   {
+       width: 70%;
+       height: 49px;
+      background-color: #E1E1E1;
+     outline: none;
+     padding-left: 30px;
+     border-radius: 25px 0px 0px 25px ;
+   
+    
+     
+
+   }
+ .feedback input::placeholder
+   {
+       text-align: left;
+  
+   font-family: inherit;
+       font-weight: 300;
+       font-size: 14px;
+   }
+   .subscribe-button
+   {
+    height: 49px;
+    width: 20%;
+    outline: none;
+    background-color:$color-main;
+    border-radius: 0px 25px 25px 0px ;
+    color:  #FFFFFF;
+    font-weight: 300;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+   }
+   form.feedback-form{
+    @include flex(center, center);
+    width: 100%;
+   }

@@ -1,0 +1,72 @@
+.slider
+{
+    background-color: #F7F7F7;
+    display: flex;
+ 
+	justify-content: center;
+	align-items: center;
+position: relative;
+min-height: 777px;
+
+
+.slider-img
+{
+   
+
+    @include respond-to(mini)
+    {
+        width: 300px;
+    }
+   
+ 
+}
+
+
+
+
+
+
+
+
+@include respond-to(tablet)
+{
+    min-height: 624px;
+ 
+    
+}
+
+
+
+   
+    padding-bottom: $shift;
+    &-btn 
+    {
+        color: $color-black;
+        background-color: #E0E0E0;
+        text-align: center;
+        min-width: 47px;
+        min-height: 47px;
+        font-size: 30px;
+       
+        position: absolute;
+        &-left {
+            left: 5px;
+        }
+        
+        &-right {
+            right: 5px;
+        }
+        &:hover
+        {
+            color: $color-main;
+        }
+    }
+
+
+
+
+
+  
+}
+
+

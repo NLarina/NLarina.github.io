@@ -1,0 +1,90 @@
+
+.promo
+{
+   background-color: #F1E4E6;
+  
+    .wrap-promo
+{
+    background-image: url(../img/promo-bg.png);
+    min-height: 764px;
+  
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: -30%;
+@include flex(center, flex-end);
+
+@include respond-to('tablet')
+{
+    min-height: 368px;
+    background-size: 368px 368px;
+    background-position-x: 0;
+    
+}
+
+@include respond-to(mini)
+{
+    background-image: none;
+    @include flex(center, center);
+   
+}
+
+
+}
+.header-title
+{
+    border-left: $color-main solid 12px;
+    padding-left: 16px;
+    margin-right: 7%;
+
+  
+
+}
+span.title-header{
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 57.6px;
+    color: #222222;
+
+    @include respond-to('mobile')
+    {
+        font-size: 38px;
+        line-height: 45.6px; 
+    }
+
+ 
+    
+}
+.title2-header
+{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38.4px;
+    color: $color-black;
+
+    @include respond-to('tablet')
+    {
+        font-size: 24px;
+        line-height: 28.8px; 
+    }
+
+    @include respond-to('mobile')
+    {
+        font-size: 20px;
+        line-height: 24px; 
+    }
+   
+}
+ .last-word-title {
+    color: $color-main;
+}
+.header-title
+{
+    color: white;
+}
+
+
+
+}
+
+
+

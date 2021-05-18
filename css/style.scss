@@ -1,0 +1,227 @@
+
+$color-main:#F16D7F;
+$color-black: #222224;
+$shift:50px;
+
+html
+{
+    height: 100%;
+}
+
+body{
+    margin:0%;
+    padding: 0%;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+
+  details>summary:focus
+  {
+      outline: none;
+  }
+
+  $breakpoints: (
+  'tablet': (max-width: 1196px),
+  'tablet-cart': (max-width: 1196px),
+  
+  'mobile': (max-width: 788px),
+  
+  'mini': (max-width: 768px),
+  
+  'cards-mobile': (max-width: 790px),
+
+);
+
+@mixin respond-to($breakpoint) {
+    $raw-query: map-get($breakpoints, $breakpoint);
+  
+    @if $raw-query {
+      $query: if(
+        type-of($raw-query) == 'string',
+        unquote($raw-query),
+        inspect($raw-query)
+      );
+  
+      @media #{$query} {
+        @content;
+      }
+    } @else {
+    @error 'Не указано значение для `#{$breakpoint}`. '
+         + 'Пожалуйста, убедитесь, что точка останова объявлена в карте `$breakpoints`.';
+    }
+  }
+
+
+
+
+
+@mixin flex ($align-items:center, $justify-content:space-between) 
+{
+    display: flex;
+    flex-wrap: wra;
+    align-items: $align-items;
+    justify-content: $justify-content;  
+}
+
+@mixin shadow-box {
+    box-shadow: 6px 4px 35px  rgba(0, 0, 0, 0.21);  
+}
+@mixin font-property-cart
+{
+    font-weight: 400;
+    font-size: 22px;
+    
+    color: #575757;
+}
+@mixin gray_thin_text ($size, $height) 
+{
+    color:  #4D4D4D;
+    font-weight: 300;
+    font-size:$size;
+    line-height:$height;
+
+}
+
+
+@media(max-width:1196px)
+{
+  .wrap
+  {
+      padding: 0% 16px;
+  }
+}
+
+
+
+
+main
+{
+    flex: 1 0 auto;
+}
+
+
+a{
+    text-decoration: none;  
+}
+a.block-link
+{
+    display: block;
+}
+h1,h2,h3,p
+{
+    margin:0%
+}
+details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+input,button
+{
+    padding: 0%;
+    margin: 0%;
+    border: none;
+    outline: none;
+}
+ul{
+    list-style: none;
+}
+
+
+.wrap{
+   max-width: 1140px;
+   margin: 0% auto;
+  
+  
+
+}
+
+
+
+
+
+
+
+.input-checkbox{
+    opacity: 0;
+    filter: alpha(opacity=0);
+
+
+    &__text{   
+      
+          
+        &::before{
+            content: '';
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            visibility: visible;
+           
+            left: 0;
+           height: 13px;
+           margin-right: 9px;
+           width: 13px; 
+            border: 1px solid #EBEBEB;
+        }
+        
+    }
+    &:checked +  &__text::before
+    {  
+        background-image: url(../img/check-solid.svg);
+    }
+}
+   .hidden
+   {
+    position: absolute;
+    left: -99999999999999px;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+   }
+
+
+   button
+   {
+       cursor: pointer;
+       transition: background-color 0.4s;
+   }
+   @keyframes  gradient {
+    0%{background-position:82% 0%}
+50%{background-position:19% 100%}
+100%{background-position:82% 0%}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   @import "header";
+   @import "breadcrumbs";
+   @import "filter-add";
+   @import "promo";
+   @import "categories";
+   @import "products-item";
+   @import "advantages";
+   @import "feedback";
+   @import "footer";
+   @import "pagination";
+   @import "slider";
+   @import "about-product";
+   @import "cart";
+   @import "registration";
+   @import"forms";
+   

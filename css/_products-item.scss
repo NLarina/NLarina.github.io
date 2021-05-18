@@ -1,0 +1,286 @@
+.popular-products
+{
+
+
+ @include flex(space-between, space-between);
+    flex-direction: column;
+   
+  
+
+    &_down
+    {
+        &_90
+        {
+            margin-bottom: 90px;
+        }
+        &_130
+        {
+            margin-bottom: 130px;
+        }
+       
+    }
+    .products-items
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include respond-to(cards-mobile)
+    {
+        flex-direction: column;
+        align-content: space-around;
+     
+    }
+
+
+}
+
+
+
+
+
+
+.products-title
+{
+    height: 55px;
+    width: 336px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+@include flex();
+    flex-direction: column;
+  
+ 
+
+}
+.producs-title-main{
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    color: $color-black;  
+}
+.producs-title-additional{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.8px;
+    color:  #9F9F9F;
+     
+}
+
+
+
+.product-item
+{
+@include flex();
+   flex-direction: column;
+   margin-top: 30px;
+   background-color: #F8F8F8;
+   position: relative;
+  
+
+   &:hover .overlay-item
+   {
+ opacity: 1;
+ animation: gradient 5s ease infinite;
+
+   }
+
+   margin-right: 2.6%;
+   &:nth-child(3n)
+   {
+    margin-right: 0;
+   }
+
+   
+   @include respond-to(tablet-cart)
+   {
+  
+    margin-right: 0;
+     &:nth-child(2n+1)
+     {
+        margin-right: 2.6%;
+     }
+
+     &:nth-child(9)
+     {
+       display: none;
+     }
+
+
+    
+
+
+   }
+
+
+   @include respond-to(cards-mobile)
+   {
+    margin-right: 0;
+
+    &:nth-child(2n+1)
+    {
+       margin-right: 0px;
+    }
+
+    &:nth-child(9)
+    {
+      display: block;
+    }
+ 
+    
+   }
+   
+}
+
+.title-product-item
+{
+    width: 315px;
+    height: 78px;
+    margin:  40px 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  
+}
+.products-items .products-item .product-item-link img
+{
+    width: 420px;
+    height: 360px;
+
+   
+}
+h3.main-title-item 
+{
+    color:  #000000;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 15.6px;
+  
+}
+p.discription-title-item
+{
+    color: #5D5D5D;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+
+}
+p.price-title-item
+{
+    color: $color-main;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+
+}
+   
+}
+
+.products-title
+{
+   @include flex();
+   flex-direction: column;
+   margin-top: 96px;
+   margin-bottom: 40px;
+   
+   &__additional
+   {
+       color:  #9F9F9F;
+       
+   }
+
+}
+.products-button
+{
+   
+   
+    margin-top: $shift;
+@include flex(center,center);
+    height: 48px;
+    width: 212px;
+    border:$color-main solid 1px;
+    color: $color-main;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    background-color:white;
+    transition: 0.5s;
+    &_down
+    {
+        &_110
+        {
+            margin-bottom: 110px;
+        }
+    }
+
+    &__text
+    {
+        margin-left: 7%;
+    }
+
+    &:hover{
+
+        background-color: $color-main;
+        color: #FFFFFF;
+    }
+   
+  
+}
+
+.overlay-item
+{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    min-height: 420px;
+    width: 100%;
+    background: linear-gradient(226deg, rgba(58, 56, 56, 0.83), #11ffee00);
+     background-size: 400% 400%;
+    opacity: 0;
+    transition: 0.6s;
+
+   
+    @include flex(center, center);
+    
+
+    &__button{
+
+        margin-top: $shift;
+        @include flex(center, center);
+        height: 44px;
+        width: 139px;
+        background:none;
+        border: 1px solid #FFFFFF;
+        color: #FFFFFF;
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+
+    
+         
+&:hover
+{
+    color: $color-main;
+    background-color:rgba(255, 255, 255,0.8);
+    border: 1px solid $color-main;
+    
+    svg path
+
+    {
+        fill: $color-main;
+    }
+}
+
+    }
+  
+}
+
+
+
+.product-page .product-item:last-child
+{
+    @include respond-to(tablet)
+    {
+        display: none;
+    }
+}

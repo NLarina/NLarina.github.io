@@ -1,0 +1,30 @@
+.pagination
+{
+    display: flex;
+   justify-content: center;
+   
+}
+.pagination-list a
+{
+    display: block;
+    color: #C4C4C4;
+}
+.pagination-list
+{
+    min-height: 44px;
+    min-width: 284px;
+    border: 1px solid #EBEBEB;
+   @include flex(center, space-around);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19.2px;
+    margin-top: -40px;
+    margin-bottom:100px ;
+    color:  #C4C4C4;
+}
+
+.pagination-last-items
+{
+    display: flex;
+  
+}

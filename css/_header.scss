@@ -1,0 +1,161 @@
+
+.header
+{
+    background-color:  $color-black;
+    padding: 20px 0;
+    position: relative;
+    flex: 0 0 auto;
+}
+.header-wrap
+{
+    
+    color: white;
+    @include flex();
+    align-items: center;
+    
+    @mixin ident-title-nav {
+     
+        margin-top: 37px;
+        margin-left:14.5% ;
+    }
+    
+    
+.logo-link
+{
+    margin-right: 38px;
+}
+.account-link
+{
+    margin: 0 35px;
+}
+
+@include respond-to('mini')
+    {
+      .account-link, .cart-link
+        {
+            display: none;
+        }
+    }
+
+
+
+
+#menu
+{
+    display: none;
+}
+
+#menu:checked ~.nav
+{
+opacity: 1;
+}
+.btn-menu
+{
+    display: inline-block;
+ 
+}
+.nav
+{
+    position: absolute;
+    z-index: 2;
+    min-width: 232px;
+    min-height: 764px;
+    background-color: #FFFFFF;
+right: 0;
+    top: 100%;
+  @include shadow-box();
+ opacity: 0;
+  transition: 0.5s;
+ 
+  
+}
+
+.nav-overlay
+{
+    position: relative;
+   
+  
+
+}
+.btn-close
+{
+    position: absolute;
+   right: 17px;
+   top: 16px;
+}
+
+
+.nav-title{
+     font-size: 14px;
+     font-weight: 700;
+     line-height: 17px;
+     color:  #000000;
+     display: inline-block;
+     @include ident-title-nav();
+    
+     
+   }
+
+   .nav-heading
+   {
+    
+    margin-top: 20px;
+    margin-left:14.5% ;
+font-size: 14px;
+font-weight: 400;
+line-height: 17px;
+color: $color-main;
+
+
+   }
+   .nav-item
+   {
+    
+    font-size: 14px;
+ 
+    font-weight: 400;
+    line-height: 17px;
+    color: #6F6E6E;
+    margin-top: 11px;
+    
+    
+    transform: translateX(1);
+    
+    &:hover
+    {
+        color: $color-main;
+       font-weight: 600;
+    }
+
+    
+   }
+
+
+   svg 
+   {
+       path{
+        transition: 0.5s;
+       }
+       transform: scale(1);
+       transition: 0.5s;
+       &:hover
+       {
+           transform: scale(1.2);
+       }
+
+
+       &:hover path
+       {
+           fill: $color-main;
+          
+       }
+
+
+
+
+   }
+   
+
+
+
+}

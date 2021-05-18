@@ -1,0 +1,37 @@
+.name-category
+{
+   background-color: #F8F3F4;
+   
+}
+.name-category-wrap
+{
+    @include flex();
+    min-height: 150px;
+    @include respond-to(mini)
+    {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+   
+}
+.title-name-category
+{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: $color-main;
+    
+}
+.inactive-link-add-navigation
+{
+    color:  #636363;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+ 
+}
+.active-link-add-navigation
+{
+    color: $color-main;
+    font-weight: 700;
+}
